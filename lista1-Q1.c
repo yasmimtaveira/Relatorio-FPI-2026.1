@@ -1,99 +1,57 @@
 #include <stdio.h>
 
 int main(){
-    int d1, m1, a1, d2, m2, a2;
-    scanf("%d/%d/%d %d/%d/%d", &d1, &m1, &a1, &d2, &m2, &a2);
 
-    // AMOR
-    int resultado = (d1 + m1 + a1 + d2 + m2 + a2) * 7 % 101;
-    printf("Amor: %d%% ", resultado);
-    if (resultado < 20){
-        puts("Pessimo dia para se apaixonar.");
-    } else if (resultado <= 40){
-        puts("Melhor manter o coracao <3 longe de perigo.");
-    } else if (resultado < 70){
-        puts("Se o papo e as ideias baterem, esta liberado pensar em algo.");
-    } else if (resultado <= 80){
-        puts("Saia com o coracao aberto, mas lembre, nem toda troca de olhar em onibus e sinal de romance.");
-    } else{
-        puts("Um dia deslumbrantemente lindo para amar. Ps: Cuidado com a intensidade.");
-    }
-
-    // SORTE
-    if (a1 >= a2){
-        resultado = ((d1+d2+m1+m2)*9 + (a1 - a2)) % 101;
-    }else{
-        resultado = ((d1+d2+m1+m2)*9 + (a2 - a1)) % 101;
+    int money, x, y, z;     // ENTRADA
+    int A, B, C, R;            // QUANTO CADA HOMEM e rebeka GANHOU 
+    int sucesso;
+    scanf("%d %d %d %d", &money, &x, &y, &z);
+    
+    if (//inteiros){  
+        A = x/100 * money;
+        B = y/100 * money;
+        C = z/100 * money;
+        sucesso = 1;
+        
+        if (A+B+C < money){
+            R = money - A - B - C;
+        }else {
+            R = 0;
+        }
+    } else {
+        // valores não inteiros, rebeka investe dinheiro
+        // checar se com ela investindo dinheiro vai conseguir dividir
+        // se conseguir:
+        sucesso = 1;
+        //se nao conseguir:
+        sucesso = 0;
+        
+        int investimento;
+        if (investimento == 2){
+            int l, m, n;
+            scanf("%d %d %d", &l, &m, &n);
+            
+        } else if (investimento == 3){
+            int i1, i2, i3;
+            scanf("%d %d %d", &i1, &i2, &i3);
+            
+            if (i1 % 3 ==0 || i2 % 3 == 0 || i3 % 3 == 0){
+                //Rebeka deverá retornar a soma final de parcelas do número 3 presente nas idades deles
+            }
+        }
     }
     
-    printf("Sorte: %d%% ", resultado);
-    if (resultado < 30){
-        printf_s("Nem jogue moedas pra cima hoje.");
-    } else if (resultado <= 50){
-        printf_s("Melhor nao arriscar.");
-    } else if (resultado < 80){
-        printf_s("Por sua conta em risco.");
-    } else if (resultado <= 90){
-        printf_s("Hoje vale a pena arriscar.");
-    } else{
-        printf_s("Nao tenha medo de virar cartas hoje.");
+    if (sucesso == 1){
+        prinf("Cada homem ficou com %d, %d e %d reais, respectivamente\n", A, B, C);
+    }else{
+        prinf_s(“Nao foi dessa vez que Rebeka pode ajudar...\n”);
     }
-    puts(" Sem tigrinho nem jogos de azar, por favor!");
-
-    // TRABALHO
-    resultado = ((a1+a2) - (d1+d2+m1+m2)*8) % 101;
-    printf("Trabalho: %d%% ", resultado);
-    if (resultado < 40){
-        puts("Hoje nao sera um dia tao proveitoso, keep calm e faca o basico.");
-    } else if (resultado <= 50){
-        puts("Segura a emocao, nao xinga ninguem, nao esquece de beber agua.");
-    } else if (resultado < 70){
-        puts("Um dia proveitoso com certeza, leve sua simpatia consigo.");
-    } else if (resultado <= 84){
-        puts("Boas vibracoes hoje, chances podem estar ao seu redor.");
-    } else{
-        puts("Use do maximo de networking possível hoje, dia bom para negocios.");
+    
+    if (R >= 7){
+        prinf_s(“Ela conseguiu! Rebeka voltou para casa e apanhou da mae por sumir noite passada!\n”);
+    }else{
+        prinf_s(“E parece que Rebeka vai ter que voltar andando...\n”);
     }
-
-    // COR
-    resultado = (a1*a1 + a2*a2 + m1*m1 + m2*m2 + d1*d1 + d2*d2) % 11;
-  
-    switch (resultado){
-    case 0:
-        puts("Cor: Cinza.");
-        break;
-    case 1:
-        puts("Cor: Vermelho.");
-        break;
-    case 2:
-        puts("Cor: Laranja.");
-        break;
-    case 3:
-        puts("Cor: Amarelo.");
-        break;
-    case 4:
-        puts("Cor: Verde.");
-        break;
-    case 5:
-        puts("Cor: Azul.");
-        break;
-    case 6:
-        puts("Cor: Roxo.");
-        break;
-    case 7:
-        puts("Cor: Marrom.");
-        break;
-    case 8:
-        puts("Cor: Rosa.");
-        break;
-    case 9:
-        puts("Cor: Preto.");
-        break;
-    case 10:
-        puts("Cor: Branco.");
-        break;
-    }
-
+    
     return 0;
-
 }
