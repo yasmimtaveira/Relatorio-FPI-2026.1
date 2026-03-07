@@ -1,3 +1,5 @@
+// uso de IA apenas para perguntas sobre sintaxe 
+
 #include <stdio.h>
 
 int main(){
@@ -17,3 +19,4 @@ int main(){
         puts("Saia com o coracao aberto, mas lembre, nem toda troca de olhar em onibus e sinal de romance.");
     } else{
         puts("Um dia deslumbrantemente lindo para amar. Ps: Cuidado com a intensidade.");
+
