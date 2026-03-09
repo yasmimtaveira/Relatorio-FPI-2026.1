@@ -80,7 +80,7 @@ int main(){
         if (investimento == 2){
             char l, m, n;
             int v1, v2, v3;
-            scanf("%c %c %c", &l, &m, &n);
+            scanf(" %c %c %c", &l, &m, &n);
             v1 = l;
             v2 = m;
             v3 = n;
@@ -124,10 +124,7 @@ int main(){
     }else{
         printf("Nao foi dessa vez que Rebeka pode ajudar...\n");
     }
-
-
-    
-    
+  
     if (R >= 7){
         printf("Ela conseguiu! Rebeka voltou para casa e apanhou da mae por sumir noite passada!\n");
     }else{
