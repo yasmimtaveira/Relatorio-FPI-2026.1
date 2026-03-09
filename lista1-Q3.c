@@ -117,7 +117,10 @@ int main(){
             
             if (i1 % 3 ==0 || i2 % 3 == 0 || i3 % 3 == 0){
                 //Rebeka deverá retornar a soma final de parcelas do número 3 presente nas idades deles
-                int parcelas = i1 / 3 + i2 / 3 + i3 / 3;
+                int parcelas = 0;
+                if (i1 % 3 == 0) parcelas += i1 / 3;
+                if (i2 % 3 == 0) parcelas += i2 / 3;
+                if (i3 % 3 == 0) parcelas += i3 / 3;
                 printf("%d\n", parcelas);
             }
         }
