@@ -30,15 +30,15 @@ int main(){
     
     printf("Sorte: %d%% ", resultado);
     if (resultado < 30){
-        printf_s("Nem jogue moedas pra cima hoje.");
+        printf("%s","Nem jogue moedas pra cima hoje.");
     } else if (resultado <= 50){
-        printf_s("Melhor nao arriscar.");
+        printf("%s","Melhor nao arriscar.");
     } else if (resultado < 80){
-        printf_s("Por sua conta em risco.");
+        printf("%s","Por sua conta em risco.");
     } else if (resultado <= 90){
-        printf_s("Hoje vale a pena arriscar.");
+        printf("%s","Hoje vale a pena arriscar.");
     } else{
-        printf_s("Nao tenha medo de virar cartas hoje.");
+        printf("%s","Nao tenha medo de virar cartas hoje.");
     }
     puts(" Sem tigrinho nem jogos de azar, por favor!");
 
