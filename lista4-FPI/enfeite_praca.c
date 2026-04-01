@@ -49,7 +49,7 @@ void enfeitaMatriz(size_t linhas, size_t colunas, char matriz[linhas][colunas]){
 
 int main() {
 
-	size_t m, n;
+	int m, n;
 	scanf("%d %d", &m, &n);
 
 	char matrizPraca[m][n];
