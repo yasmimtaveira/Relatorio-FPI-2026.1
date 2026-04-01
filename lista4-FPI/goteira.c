@@ -1,5 +1,4 @@
-// código feito se auxilio de IA
-// lógica baseada nos 2 test cases fornecidos no enunciado da questão (juiz fora do ar)
+// codigo feito se auxilio de IA, observei um padrao e consegui montar a lógica para adicionar as gotas
 
 #include <stdio.h>
 
@@ -44,12 +43,11 @@ int main() {
 	int m, n;
 	scanf("%d %d", &m, &n); // dimensoes da matriz
 	char matrix[m][n];
-	matrix[m][n] = ""; // inicializando a matriz
 	for (int i = 0; i < m; i++) {
 		scanf("%s", matrix[i]); // recebendo as linhas
 	}
 
-	molharMatriz(m, n, matrix); // chamando a função
+	molharMatriz(m, n, matrix); // chamando a funçãoo
 
 	for (int i = 0; i < m; i++) {
 		for (int j = 0; j < n; j++) {
